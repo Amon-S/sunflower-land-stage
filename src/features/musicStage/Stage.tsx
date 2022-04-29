@@ -12,7 +12,7 @@ import { GRID_WIDTH_PX } from "features/game/lib/constants";
 
 import Romy from "assets/npcs/stage/Romy.gif";
 import finalStage from "assets/npcs/stage/FINAL_STAGE_WOOH.gif";
-import note from "assets/icons/Note_1.png";
+import note from "assets/icons/Note_2.png";
 import { Npc } from "./components/Npc";
 import { Action } from "components/ui/Action";
 
