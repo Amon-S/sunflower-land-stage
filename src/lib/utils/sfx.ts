@@ -19,10 +19,9 @@ import barnMp3 from "../../assets/sound-effects/barn.mp3";
 import battleMp3 from "../../assets/sound-effects/battle.mp3";
 import diaryMp3 from "../../assets/sound-effects/diary.mp3";
 
-import surprise from "../../assets/songs/Surprise.mp3";
-
-export const surpriseAudio = new Howl({
-  src: [surprise],
+import sfl2 from "../../assets/songs/sfl2.mp3";
+export const sfl2Audio = new Howl({
+  src: [sfl2],
   volume: 0.2,
 });
 

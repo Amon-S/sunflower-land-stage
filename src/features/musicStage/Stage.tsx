@@ -5,38 +5,16 @@ import classNames from "classnames";
 import "./stage.css";
 import { Context } from "features/game/GameProvider";
 
-import { surpriseAudio } from "lib/utils/sfx";
+import { sfl2Audio } from "lib/utils/sfx";
 import stage from "assets/buildings/New_Stage_SFL.gif";
 import fireworks from "assets/decorations/firework.gif";
 import { GRID_WIDTH_PX } from "features/game/lib/constants";
 
 import Romy from "assets/npcs/stage/Romy.gif";
-
-import devtest from "assets/npcs/stage/devtest.gif";
-import chicken from "assets/npcs/stage/Dev_Chicken.gif";
-import spencer from "assets/npcs/stage/Dev_Spencer.gif";
-import adam from "assets/npcs/stage/Dev_Blue_Shirt.gif";
-import brown from "assets/npcs/stage/Dev_Brown_Shirt.gif";
+import finalStage from "assets/npcs/stage/FINAL_STAGE_WOOH.gif";
+import note from "assets/icons/Note_1.png";
 import { Npc } from "./components/Npc";
-import { Modal } from "react-bootstrap";
-
-const NPC_LIST = [
-  {
-    message: "I am the devtest0",
-  },
-  {
-    message: "I am chicken",
-  },
-  {
-    message: "i am adam",
-  },
-  {
-    message: "I am spencer",
-  },
-  {
-    message: "i am steve",
-  },
-];
+import { Action } from "components/ui/Action";
 
 export default function Stage() {
   const { gameService } = useContext(Context);
@@ -48,10 +26,10 @@ export default function Stage() {
   const fireWorks = () => {
     if (isNotReadOnly && !isOpen) {
       setIsOpen(true);
-      surpriseAudio.play();
+      sfl2Audio.play();
     } else {
       setIsOpen(false);
-      surpriseAudio.stop();
+      sfl2Audio.stop();
     }
   };
 
@@ -77,9 +55,16 @@ export default function Stage() {
           "hover:img-highlight": isNotReadOnly,
         })}
       >
-        <div onClick={fireWorks}>
+        <Action
+          className="relative "
+          text="Stage"
+          icon={note}
+          onClick={fireWorks}
+        />
+
+        <div>
           <img
-            src={stage}
+            src={!isOpen ? stage : finalStage}
             alt="stage"
             style={{
               transform: "scale(2.2)",
@@ -94,7 +79,7 @@ export default function Stage() {
           <img
             src={fireworks}
             style={{
-              transform: "translate(-70px,-450px)",
+              transform: "translate(-75px,-450px)",
             }}
             alt="fireworks"
             className="fireworks1"
@@ -104,7 +89,7 @@ export default function Stage() {
           <img
             src={fireworks}
             style={{
-              transform: "translate(190px,-750px)",
+              transform: "translate(195px,-750px)",
             }}
             alt="fireworks"
             className="fireworks1"
@@ -118,16 +103,6 @@ export default function Stage() {
             }}
           >
             <Npc img={Romy} message={"i am romy"} X={-4.25} Y={-15} />
-            <Npc
-              img={devtest}
-              message={NPC_LIST[0].message}
-              X={-2.25}
-              Y={-13}
-            />
-            <Npc img={chicken} message={NPC_LIST[1].message} X={-7} Y={-12.7} />
-            <Npc img={adam} message={NPC_LIST[2].message} X={-3.5} Y={-11.8} />
-            <Npc img={brown} message={NPC_LIST[3].message} X={-6} Y={-11} />
-            <Npc img={spencer} message={NPC_LIST[4].message} X={-2} Y={-11} />
           </div>
         )}
       </div>

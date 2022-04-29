@@ -9,6 +9,7 @@ interface Props {
   icon: any;
   onClick: () => void;
   className: string;
+   
 }
 
 export const Action: React.FC<Props> = ({ text, icon, onClick, className }) => {
