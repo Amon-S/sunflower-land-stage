@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { useActor } from "@xstate/react";
-
+ 
 import classNames from "classnames";
 import "./stage.css";
 import { Context } from "features/game/GameProvider";

@@ -19,19 +19,19 @@ import brown from "assets/npcs/stage/Dev_Brown_Shirt.gif";
 
 const NPC_LIST = [
   {
-    message: "I am the Devtest",
+    message: "I tried to think of something clever, but ended up farming instead",
   },
   {
     message: "I am Chicken",
   },
   {
-    message: "i am Adam",
+    message: "Games should to be owned by the community that supports them",
   },
   {
     message: "Be Respectful, Stay Positive and Have Fun!",
   },
   {
-    message: "i am Spencer",
+    message: "Life is about planting seeds and watching them grow",
   },
 ];
 
