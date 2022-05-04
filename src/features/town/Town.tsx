@@ -57,11 +57,11 @@ export const Town: React.FC = () => {
       <WishingWell />
       <Mail />
 
-      <Npc img={devtest} message={NPC_LIST[0].message} X={-30} Y={4} />
-      <Npc img={chicken} message={NPC_LIST[1].message} X={-35} Y={2} />
-      <Npc img={adam} message={NPC_LIST[2].message} X={-45} Y={4} />
-      <Npc img={brown} message={NPC_LIST[3].message} X={-40} Y={8} />
-      <Npc img={spencer} message={NPC_LIST[4].message} X={-56} Y={7.8} />
+      <Npc img={devtest} message={NPC_LIST[0].message} X={-30} Y={4} scale={"scale(0.8)"} />
+      <Npc img={chicken} message={NPC_LIST[1].message} X={-5} Y={9.5} scale={"scale(0.85)"} />
+      <Npc img={adam} message={NPC_LIST[2].message} X={-43} Y={4} scale={"scale(0.8)"}/>
+      <Npc img={brown} message={NPC_LIST[3].message} X={-35} Y={-13} scale={"scale(0.7)"} />
+      <Npc img={spencer} message={NPC_LIST[4].message} X={-20} Y={18} scale={"scale(0.7)"} />
     </div>
   );
 };

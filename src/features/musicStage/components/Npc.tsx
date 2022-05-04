@@ -10,10 +10,10 @@ interface Props {
   message: string;
   X: number;
   Y: number;
-
+  scale?: string
 }
 
-export const Npc: React.FC<Props> = ({ img, message, X, Y }) => {
+export const Npc: React.FC<Props> = ({ img, message, X, Y,scale }) => {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -26,7 +26,7 @@ export const Npc: React.FC<Props> = ({ img, message, X, Y }) => {
           width: `${GRID_WIDTH_PX * 2}px`,
           right: `${GRID_WIDTH_PX * -X}px`,
           top: `${GRID_WIDTH_PX * Y}px`,
-
+          transform:scale
       
         }}
       />

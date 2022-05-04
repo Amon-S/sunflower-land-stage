@@ -45,8 +45,8 @@ export default function Stage() {
       // TODO some sort of coordinate system
       style={{
         width: `${GRID_WIDTH_PX * 6}px`,
-        left: `${GRID_WIDTH_PX * 29.8}px`,
-        top: `${GRID_WIDTH_PX * 28}px`,
+        left: `${GRID_WIDTH_PX * 73.5}px`,
+        top: `${GRID_WIDTH_PX * 20}px`,
       }}
     >
       <div
