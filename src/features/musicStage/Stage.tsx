@@ -15,8 +15,8 @@ import finalStage from "assets/npcs/stage/FINAL_STAGE_WOOH.gif";
 import note from "assets/icons/Note_2.png";
 import { Npc } from "./components/Npc";
 import { Action } from "components/ui/Action";
-import { InnerPanel } from "components/ui/Panel";
 import disc from "assets/icons/disc.png";
+import cross from "assets/icons/cross.png";
 
 export default function Stage() {
   const { gameService } = useContext(Context);
@@ -138,7 +138,13 @@ export default function Stage() {
                 zIndex: "10",
               }}
             >
-              <Npc img={Romy} message={"i am romy"} X={-3.75} Y={-14} scale={"scale(0.8)"} />
+              <Npc
+                img={Romy}
+                message={"i am romy"}
+                X={-3.75}
+                Y={-14}
+                scale={"scale(0.8)"}
+              />
             </div>
           )}
         </div>
@@ -147,13 +153,13 @@ export default function Stage() {
         className="z-10 absolute"
         // TODO some sort of coordinate system
         style={{
-          width: `${GRID_WIDTH_PX * 6}px`,
+          width: `${GRID_WIDTH_PX * 5}px`,
           left: `${GRID_WIDTH_PX * 30.23}px`,
           top: `${GRID_WIDTH_PX * 39}px`,
         }}
       >
         <div>
-          <Action2 className="relative" icon={note} onClick={summon} />
+          <Action2 className="relative" icon={cross} onClick={summon} />
           {summoned && (
             <Npc
               img={Fitzee}
