@@ -5,7 +5,7 @@ import { InnerPanel, Panel } from "./Panel";
 import classNames from "classnames";
 
 interface Props {
-  text: string;
+  text?: string;
   icon: any;
   onClick: () => void;
   className: string;
